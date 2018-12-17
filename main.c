@@ -40,7 +40,9 @@ int main()
 
     double start, end;
     start = omp_get_wtime();
-    multiply(&v, &res);
+    for (int k = 0; k < 10; ++k) {
+    	multiply(&v, &res);
+    }
     end = omp_get_wtime();
 
     printf("Result - %f\n", res);
